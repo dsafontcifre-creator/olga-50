@@ -7,7 +7,7 @@
 <!-- Previsualització en compartir (WhatsApp, etc.) -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Olga · 50 anys">
-<meta property="og:description" content="Centre Hípic La Terreta · diumenge 5 de juliol, 14 h. Confirma la teua assistència abans del 28 de juny">
+<meta property="og:description" content="Centre Hípic La Terreta · diumenge 5 de juliol, 14 h. Confirma la teua assistència abans del 15 de juny">
 <meta property="og:image" content="https://olga-50.vercel.app/preview.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -23,7 +23,7 @@
     --gold:#c9a55c; --gold-soft:#dcc187; --white:#fff;
   }
   *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
   body{
     font-family:'Quicksand',sans-serif;color:var(--ink);
     background:linear-gradient(180deg,#bcd6e6 0%,#cfdfe1 14%,#e3dccb 30%,#f3e3c6 48%,var(--cream) 70%,var(--cream) 100%);
@@ -172,7 +172,7 @@
 
   <!-- SECTION 2 -->
   <section>
-    <p class="para reveal">Vos convidem diumenge a l'Hípica La Terreta per dinar i celebrar-ho amb les persones que estima i amb qui comparteix els seus millors moments.</p>
+    <p class="para reveal">Vos convidem diumenge a l'Hípica La Terreta, a Borriol, per dinar i celebrar-ho amb les persones que estima i amb qui comparteix els seus millors moments.</p>
     <div class="big-date reveal" style="margin-top:24px;">5 de juliol</div>
     <div class="meta reveal" style="margin-top:18px;">
       <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a55c" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Diumenge · 14 h</span>
@@ -191,8 +191,8 @@
     <div class="card-inner">
       <!-- STEP 1 -->
       <div class="step active reveal" id="step1">
-        <div class="step-title">Hi seràs?</div>
-        <div class="step-sub">Confirma, per favor, abans del 28 de juny</div>
+        <div class="step-title">Podràs vindre?</div>
+        <div class="step-sub">Confirma, per favor, abans del 15 de juny</div>
         <div class="btns">
           <button class="cta primary" onclick="go(2)">Compteu amb mi →</button>
           <button class="cta ghost" onclick="go(4)">M'és impossible</button>
@@ -210,8 +210,8 @@
         <div class="field">
           <label>Plat principal</label>
           <div class="rice">
-            <div class="opt" onclick="pickRice(this,'Galtes al Porto')">
-              <span class="t">Galtes al Porto</span>
+            <div class="opt" onclick="pickRice(this,'Carrilleres al Porto')">
+              <span class="t">Carrilleres al Porto</span>
             </div>
             <div class="opt" onclick="pickRice(this,'Bacallà al pilpil')">
               <span class="t">Bacallà al pilpil</span>
@@ -264,7 +264,7 @@
   <h2>Respostes</h2>
   <div class="stats">
     <div class="stat"><div class="n" id="sYes">0</div><div class="l">Vénen</div></div>
-    <div class="stat"><div class="n" id="sD1">0</div><div class="l">Galtes</div></div>
+    <div class="stat"><div class="n" id="sD1">0</div><div class="l">Carrill.</div></div>
     <div class="stat"><div class="n" id="sD2">0</div><div class="l">Bacallà</div></div>
     <div class="stat"><div class="n" id="sD3">0</div><div class="l">Arròs</div></div>
   </div>
@@ -406,7 +406,7 @@ if(CONFIGURED){
           var arros = d.attending ? (d.rice||"") : "";
           if(d.attending){
             yes++;
-            if(arros.indexOf("Galtes")>-1)d1++;
+            if(arros.indexOf("Carrill")>-1)d1++;
             else if(arros.indexOf("Bacall")>-1)d2++;
             else if(arros.indexOf("negre")>-1||arros.indexOf("Arròs")>-1)d3++;
           }
